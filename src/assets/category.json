@@ -1,0 +1,46 @@
+{
+    "data": [
+        {
+            "channelName": "VALORANT",
+            "type": "shooter",
+            "viwers": "103.8K viewers",
+            "image": "https://static-cdn.jtvnw.net/ttv-boxart/516575-832x1109.jpg"
+        },
+        {
+            "channelName": "Just Chatting",
+            "type": "shooter",
+            "viwers": "318.8K viewers",
+            "image": "https://static-cdn.jtvnw.net/ttv-boxart/509658-832x1109.jpg"
+        },
+        {
+            "channelName": "Dota 2",
+            "type": "shooter",
+            "viwers": "17.8K viewers",
+            "image": "https://static-cdn.jtvnw.net/ttv-boxart/29595-832x1109.jpg"
+        },
+        {
+            "channelName": "Honkai: Star Rail",
+            "type": "Strategy",
+            "viwers": "19.1K viewers",
+            "image": "https://static-cdn.jtvnw.net/ttv-boxart/213930085_IGDB-832x1109.jpg"
+        },
+        {
+            "channelName": "League of Legends",
+            "type": "RPG",
+            "viwers": "54.3K viewers",
+            "image": "https://static-cdn.jtvnw.net/ttv-boxart/21779-832x1109.jpg"
+        },
+        {
+            "channelName": "Counter-Strike: Global Offensive",
+            "type": "FPS",
+            "viwers": "21.1K viewers",
+            "image": "https://static-cdn.jtvnw.net/ttv-boxart/32399_IGDB-832x1109.jpg"
+        },
+        {
+            "channelName": "Minecraft",
+            "type": "Adventure Game",
+            "viwers": "22.2K viewers",
+            "image": "https://static-cdn.jtvnw.net/ttv-boxart/27471_IGDB-832x1109.jpg"
+        }
+    ]
+}
