@@ -93,8 +93,8 @@ export default function HomePage() {
                                                     <img className="lg:min-w-[340px] md:min-w-[260px] min-w-[140px]" src={e.image} alt="" />
                                                 </div>
                                                 <div className="flex p-2">
-                                                    <div className="">
-                                                        <p className="font-extrabold text-sm  text-gray-200 ">{e.channelName}</p>
+                                                    <div className="truncate">
+                                                        <p className="font-extrabold text-sm  text-gray-200 truncate">{e.channelName}</p>
                                                         <p className="text-sm text-gray-400">{e.viwers}</p>
                                                         <button className="bg-gray-600 rounded-full max-w-16 pl-2 pr-2 text-justify font-bold text-gray-400 text-xs">{e.type}</button>
                                                     </div>
