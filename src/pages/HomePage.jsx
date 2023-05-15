@@ -1,13 +1,34 @@
 import suggetion from "../assets/suggetion.json"
 import category from "../assets/category.json"
-
+import { useEffect, useState } from "react"
 export default function HomePage() {
     console.log(suggetion)
+    const [prevScrollPos, setPrevScrollPos] = useState(0);
+    const [visible, setVisible] = useState(true)
+
+    function handleScroll() {
+        const currentScrollPos = window.scrollY
+        console.log(window.scrollY, 'hi handlescroll')
+        if (currentScrollPos > prevScrollPos) {
+            setVisible(false)
+        } else {
+            setVisible(true)
+        }
+
+        setPrevScrollPos(currentScrollPos)
+    }
+    window.addEventListener('scroll', handleScroll)
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll, () => console.log("first"));
+        console.log(window.scrollY, 'hello')
+        return () => window.removeEventListener('scroll', handleScroll, () => console.log('second'))
+    })
+
     return (
         <>
-            <div className="w-screen h-screen bg-black overflow-y-auto scrollbar-hide">
+            <div className="w-screen h-full bg-black overflow- scrollbar-hide">
                 {/*navbar*/}
-                <div className="flex items-center pl-3 w-screen h-[50px] bg-[#18181B] ">
+                <div className={`flex sticky items-center pl-3 w-screen h-[50px] bg-[#18181B] z-10 ${visible ? `transition delay-100 duration-300 ease-in top-0 ` : 'transition delay-100 duration-300 ease-in -translate-y-16 top-0'}`}>
                     <div>
                         <svg className="w-7 h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="twitch"><g fill="#673AB7"><path d="M1 0 0 3v11h4v2h2l2-2h3l4-4.26V0H1zm13 9-2.8 3H7.654L5.5 13.567V12H2V1h12v8z"></path><path d="M7 4h1v4H7zM10 4h1v4h-1z"></path></g></svg>
                     </div>
@@ -27,6 +48,9 @@ export default function HomePage() {
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-7 h-7 fill-gray-100 ml-2">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
                         </svg>
+                        <div className="animate-[wiggle_1s_ease-in-out_infinite]">
+                            <h1 className="text-2xl fond-extrabold text-white">hello</h1>
+                        </div>
                     </div>
                 </div>
                 {/* navbar end*/}
